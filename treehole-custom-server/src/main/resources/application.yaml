@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: treehole-custom-server
+
+server:
+  port: 18060
