@@ -1,4 +1,4 @@
-package com.twocats.treehole;
+package com.twocats.treehole.common.customserver;
 
 import cn.hutool.core.util.StrUtil;
 import java.io.File;
