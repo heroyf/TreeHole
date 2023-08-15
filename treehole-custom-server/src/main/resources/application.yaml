@@ -4,3 +4,8 @@ spring:
 
 server:
   port: 18060
+
+treehole:
+  jwt:
+    secret: A7p!T*d#K0c$5bF8q9v6Y1w4X3z2D9M5
+    expireTime: 86400000

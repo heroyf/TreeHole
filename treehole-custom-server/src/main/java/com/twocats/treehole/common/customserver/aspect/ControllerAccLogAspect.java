@@ -30,6 +30,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 public class ControllerAccLogAspect {
 
     private static final Logger LG = LoggerFactory.getLogger(ControllerAccLogAspect.class);
+    public static final String START_EXECUTE_TIMESTAMP_KEY = "start_execute_timestamp";
+
 
     @Pointcut("execution(* com..controller..*.*(..))")
     public void controllerAspect() {
@@ -51,7 +53,7 @@ public class ControllerAccLogAspect {
         String logRequestInfo = JSONUtil.toJsonStr(requestInfo);
         String logParam = JSONUtil.toJsonStr(paramList);
         if (LG.isInfoEnabled()) {
-            LG.info("{} {}, req context: {}, req param: {}", method, uri, logRequestInfo, logParam);
+            LG.info("{} {}, req info: {}, req param: {}", method, uri, logRequestInfo, logParam);
         }
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();

@@ -13,9 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/capi/user")
 public class UserController {
-    @PostMapping("/test")
-    @ApiOperation("用户聚合信息-返回的代表需要刷新的")
-    public ApiResult getSummeryUserInfo() {
+
+    @PostMapping("/private/test")
+    @ApiOperation("私有测试接口")
+    public ApiResult privateTest() {
+        return ApiResult.success();
+    }
+
+    @PostMapping("/public/test")
+    @ApiOperation("公开测试接口")
+    public ApiResult publicTest() {
         return ApiResult.success();
     }
 }
